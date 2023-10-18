@@ -1,0 +1,90 @@
+/* nyheter.css */
+
+:root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --foreground-rgb: 255, 255, 255;
+      --background-start-rgb: 45, 45, 45;
+      --background-end-rgb: 45, 45, 45; 
+    }
+  }
+  
+  body {
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    ) rgb(var(--background-start-rgb));
+  }
+  
+  .center {
+    margin: auto;
+    text-align: center;
+    width: 50%;
+    padding: 10px;
+  }
+  
+  .link {
+    color: rgb(96, 96, 194);
+  }
+
+
+ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #f5f5f5;
+    display: flex;
+    max-width: 600px; /* Setter maks lengde på tittelboks */ 
+  }
+  
+  img {
+    width: 100px; /* Set the width of the images */
+    height: auto; /* Maintain the aspect ratio */
+    margin-right: 10px; /* Add some spacing between the image and text */
+  }
+  
+  a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+    color: #0074d9;
+  }
+
+
+/* Knappe styling */
+.back-button {
+    position: absolute;
+    top: 10px;
+    right: 10px; 
+    background-color: #0074d9;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .back-button a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .back-button:hover {
+    background-color: #0056b3;
+  }
